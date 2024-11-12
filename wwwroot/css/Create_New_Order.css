@@ -1,0 +1,115 @@
+﻿/* Center the main heading */
+h2 {
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Table styling */
+.table {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+    /* Table header styling */
+    .table thead th {
+        background: linear-gradient(to right, #2c3e50, #4CAF50, #1c2833);
+        color: white;
+        padding: 12px;
+        text-align: left;
+        border: 1px solid #ddd;
+    }
+
+    /* Table row styling */
+    .table tbody tr {
+        border: 1px solid #ddd;
+        transition: background-color 0.3s;
+    }
+
+        .table tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .table tbody tr:hover {
+            background-color: #f1f1f1;
+        }
+
+    /* Table cell styling */
+    .table td {
+        padding: 10px;
+        text-align: left;
+        border: 1px solid #ddd;
+        vertical-align: middle;
+    }
+
+/* Button styling */
+.btn {
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 4px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+/* Button styling with blue gradient */
+.btn-primary {
+    background: linear-gradient(to right, #0056b3, #007bff, #003f88);
+    color: white;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 4px;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+    .btn-primary:hover {
+        background: linear-gradient(to right, #004085, #0069d9, #002a5c);
+    }
+
+.btn-info {
+    background-color:  darkturquoise;
+    border: none;
+}
+
+    .btn-info:hover {
+        background-color: #117a8b;
+        color:#fff;
+    }
+
+.btn-warning {
+    background-color: darkslateblue ;
+    color: #fff;
+    border: none;
+}
+
+    .btn-warning:hover {
+        background-color: darkgoldenrod;
+        color: #fff;
+    }
+
+.btn-danger {
+    background-color: dodgerblue;
+    border: none;
+}
+
+    .btn-danger:hover {
+        background-color: brown;
+        color: #fff;
+    }
+
+/* Center the "Create New Order" button */
+a.btn-primary {
+    display: inline-block;
+    margin: 20px 0;
+    text-align: center;
+}

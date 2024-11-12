@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Nikhil_ST10040092_CLDV6212_Part3.Controllers
 {
-    //Controller for Adding Orders,Editing Orders, and Delete
+    //The Controller is have a  Adding Orders,Editing Orders, and Delete features
 
     public class OrderController : Controller
     {
@@ -19,7 +19,6 @@ namespace Nikhil_ST10040092_CLDV6212_Part3.Controllers
             _context = context;
         }
 
-        // GET: Order/Index
         public async Task<IActionResult> Index()
         {
             var orders = await _context.Orders
@@ -28,7 +27,7 @@ namespace Nikhil_ST10040092_CLDV6212_Part3.Controllers
             return View(orders);
         }
 
-        // GET: Order/Details/5
+       
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -48,7 +47,7 @@ namespace Nikhil_ST10040092_CLDV6212_Part3.Controllers
             return View(order);
         }
 
-        // GET: Order/Create
+        // Order/Create
         public IActionResult Create()
         {
             var products = _context.Products.ToList();
@@ -62,7 +61,7 @@ namespace Nikhil_ST10040092_CLDV6212_Part3.Controllers
             return View();
         }
 
-        // POST: Order/Create
+        //  Order/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Order order)
@@ -79,7 +78,7 @@ namespace Nikhil_ST10040092_CLDV6212_Part3.Controllers
             return View(order);
         }
 
-        // GET: Order/Edit/5
+        //Order/Edit
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -97,7 +96,7 @@ namespace Nikhil_ST10040092_CLDV6212_Part3.Controllers
             return View(order);
         }
 
-        // POST: Order/Edit/5
+        //  Order/Edit
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, Order order)
@@ -132,7 +131,7 @@ namespace Nikhil_ST10040092_CLDV6212_Part3.Controllers
             return View(order);
         }
 
-        // GET: Order/Delete/5
+        // Order/Delete
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -152,7 +151,7 @@ namespace Nikhil_ST10040092_CLDV6212_Part3.Controllers
             return View(order);
         }
 
-        // POST: Order/DeleteConfirmed/5
+        //  Order/DeleteConfirmed/
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
@@ -180,9 +179,7 @@ namespace Nikhil_ST10040092_CLDV6212_Part3.Controllers
 // W3schools
 //https://www.w3schools.com/cs/index.php
 
-// code attribution
-//Bootswatch
-//https://bootswatch.com/
+
 
 // code attribution
 // https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/start-mvc?view=aspnetcore-8.0&tabs=visual-studio
@@ -190,5 +187,3 @@ namespace Nikhil_ST10040092_CLDV6212_Part3.Controllers
 // code attribution
 // https://learn.microsoft.com/en-us/aspnet/core/security/authentication/identity?view=aspnetcore-8.0&tabs=visual-studio
 
-// code attribution
-// https://youtu.be/qvsWwwq2ynE?si=vwx2O4bCAFDFh5m_

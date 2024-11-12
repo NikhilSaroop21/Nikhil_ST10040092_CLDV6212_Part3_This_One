@@ -1,7 +1,8 @@
 ﻿@model Nikhil_ST10040092_CLDV6212_Part3.Models.Product
+<link rel="stylesheet" href="~/css/Product_Create.css" asp-append-version="true" />
 
 @{
-    ViewData["Title"] = "Add Product";
+    ViewData["Title"] = "Add a new Product";
 }
 
 <h2>Add Product</h2>
@@ -36,11 +37,11 @@
         <input type="file" name="imageFile" class="form-control" />
     </div>
 
-    <button type="submit" class="btn btn-primary">Add Product</button>
+    <button type="submit" class="btn btn-primary">Add a new Product</button>
 </form>
 
 <div>
-    <a asp-action="Index">Back to Product List</a>
+    <a asp-action="Index">Return  to  the Product List</a>
 </div>
 
 @section Scripts {

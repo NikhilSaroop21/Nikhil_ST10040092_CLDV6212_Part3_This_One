@@ -1,4 +1,5 @@
 ﻿@model IEnumerable<Nikhil_ST10040092_CLDV6212_Part3.Models.Product>
+<link rel="stylesheet" href="~/css/Manage_Product.css" asp-append-version="true" />
 
 <h2>Manage Products</h2>
 
@@ -32,7 +33,7 @@
                 <td>
                     <a asp-action="Edit" asp-route-id="@product.Product_Id" class="btn btn-warning">Edit</a>
                     <form asp-action="Delete" asp-route-id="@product.Product_Id" method="post" style="display:inline;">
-                        <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this product?');">Delete</button>
+                        <button type="submit" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete the following product?');">Delete Item</button>
                     </form>
                 </td>
             </tr>

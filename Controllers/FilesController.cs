@@ -11,7 +11,7 @@ namespace Nikhil_ST10040092_CLDV6212_Part3.Controllers
 {
     public class FileController : Controller
     {
-        // Controller to Upload Files
+        // This Controller will be  Uploading the  Files
 
         private readonly ApplicationDbContext _context;
         private readonly IWebHostEnvironment _hostEnvironment;
@@ -22,13 +22,13 @@ namespace Nikhil_ST10040092_CLDV6212_Part3.Controllers
             _hostEnvironment = hostEnvironment;
         }
 
-        // GET: File/Upload
+        // to GET  the  File/Upload
         public IActionResult Upload()
         {
             return View();
         }
 
-        // POST: File/Upload
+        // File/Upload
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Upload(FileModel fileModel)
@@ -36,17 +36,17 @@ namespace Nikhil_ST10040092_CLDV6212_Part3.Controllers
             if (fileModel.UploadedFile != null && fileModel.UploadedFile.Length > 0)
             {
                 var uploadsFolder = Path.Combine(_hostEnvironment.WebRootPath, "uploads");
-                Directory.CreateDirectory(uploadsFolder); // Ensure the folder exists
+                Directory.CreateDirectory(uploadsFolder); // Ensuring that folder actually exists
                 var uniqueFileName = Guid.NewGuid().ToString() + "_" + fileModel.UploadedFile.FileName;
                 var filePath = Path.Combine(uploadsFolder, uniqueFileName);
 
-                // Save the file to the server
+                // Saving the file to the server
                 using (var fileStream = new FileStream(filePath, FileMode.Create))
                 {
                     await fileModel.UploadedFile.CopyToAsync(fileStream);
                 }
 
-                // Save file info in the database
+                // Saving file info in the database
                 fileModel.Name = fileModel.UploadedFile.FileName;
                 fileModel.Size = fileModel.UploadedFile.Length;
                 fileModel.LastModified = DateTimeOffset.Now;
@@ -58,7 +58,7 @@ namespace Nikhil_ST10040092_CLDV6212_Part3.Controllers
             return View(fileModel);
         }
 
-        // GET: File/Index
+        
         public IActionResult Index()
         {
             var files = _context.Files.ToList();
@@ -75,14 +75,8 @@ namespace Nikhil_ST10040092_CLDV6212_Part3.Controllers
 //https://www.w3schools.com/cs/index.php
 
 // code attribution
-//Bootswatch
-//https://bootswatch.com/
-
-// code attribution
 // https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/start-mvc?view=aspnetcore-8.0&tabs=visual-studio
 
 // code attribution
 // https://learn.microsoft.com/en-us/aspnet/core/security/authentication/identity?view=aspnetcore-8.0&tabs=visual-studio
 
-// code attribution
-// https://youtu.be/qvsWwwq2ynE?si=vwx2O4bCAFDFh5m_

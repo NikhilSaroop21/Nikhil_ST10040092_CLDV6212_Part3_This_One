@@ -22,4 +22,11 @@
     <Folder Include="wwwroot\NewFolder\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="wwwroot\css\Index_AppRoles.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>

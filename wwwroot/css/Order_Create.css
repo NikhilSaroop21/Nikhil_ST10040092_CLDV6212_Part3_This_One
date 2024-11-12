@@ -1,0 +1,77 @@
+﻿/* Center the form and add padding */
+form {
+    max-width: 1500px;
+
+    background-color: #f8f9fa; /* Light gray background */
+    border-radius: 18px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 25px;
+}
+
+/* Label styling */
+.control-label {
+    font-size: 34px;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Input field styling */
+.form-control {
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 6px;
+    border: 3px solid #ddd;
+}
+
+/* Error message styling */
+.text-danger {
+    font-size: 34px;
+    color:  darkred;
+}
+
+/* Submit button styling */
+.btn-primary {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    background-color: crimson;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+    .btn-primary:hover {
+        background-color: darkred;
+    }
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    form {
+        padding: 15px;
+        width: 90%;
+    }
+
+    .btn-primary {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .form-control {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .control-label {
+        font-size: 12px;
+    }
+
+    .text-danger {
+        font-size: 12px;
+    }
+}

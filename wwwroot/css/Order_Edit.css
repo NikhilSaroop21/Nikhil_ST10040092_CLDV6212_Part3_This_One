@@ -1,0 +1,76 @@
+﻿/* Center the main heading */
+h2 {
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Form container styling */
+form {
+    background-color: #f8f9fa; /* Light gray background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: block;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 15px;
+}
+
+/* Label styling */
+.control-label {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Input and select field styling */
+.form-control {
+    font-size: 16px;
+    border-radius: 4px;
+    border: 2px solid #ddd;
+}
+
+/* Validation message styling */
+.text-danger {
+    font-size: 18px;
+    color: crimson;
+    margin-top: 5px;
+    display: block;
+}
+
+/* Button styling */
+.btn-primary,
+.btn-secondary {
+    width: 100px;
+    padding: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    transition: background-color 0.3s;
+    margin-top: 15px;
+}
+
+.btn-primary {
+    background-color:crimson;
+    margin-right: 10px;
+}
+
+    .btn-primary:hover {
+        background-color: blue;
+    }
+
+.btn-secondary {
+    background-color: chartreuse;
+}
+
+    .btn-secondary:hover {
+        background-color: darkblue;
+    }

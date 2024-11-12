@@ -1,0 +1,91 @@
+﻿/* Center the main heading */
+h2 {
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+}
+
+/* Order details container */
+.order-details {
+    background-color: #f9f9f9; /* Light gray background */
+    padding: 20px;
+    border-radius: 28px;
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Order ID styling */
+h4 {
+    color: #555;
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-family: Arial, sans-serif;
+}
+
+/* Definition list styling */
+dl.row {
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 16px;
+    text-align: left;
+    margin-top: 15px;
+}
+
+dt {
+    font-weight: bold;
+    color: #333;
+    width: 30%; /* Label width */
+}
+
+dd {
+    color: #555;
+    width: 70%; /* Value width */
+    margin-left: 0; /* Remove default margin */
+}
+
+/* Button styling */
+.btn-secondary, .btn-warning, .btn-danger {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    color: white;
+    text-decoration: none;
+    margin: 10px 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-secondary {
+    background-color: darkmagenta;
+}
+
+    .btn-secondary:hover {
+        background-color:darkgreen;
+    }
+
+.btn-warning {
+    background-color: darkcyan;
+    color: #fff;
+}
+
+    .btn-warning:hover {
+        background-color: crimson;
+    }
+
+.btn-danger {
+    background-color: blue;
+}
+
+    .btn-danger:hover {
+        background-color: brown;
+    }
+
+/* Center the buttons */
+a.btn-secondary, a.btn-warning, a.btn-danger {
+    display: inline-block;
+    margin: 15px 10px;
+}

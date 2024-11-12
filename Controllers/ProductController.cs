@@ -7,7 +7,7 @@ using System.IO;
 namespace Nikhil_ST10040092_CLDV6212_Part3.Controllers
 {
 
-    // Controller to Add Products, Edit Products and Delete Products.
+    // The Controller will be Adding Products, Edit Products and Delete Products.
 
     public class ProductController : Controller
     {
@@ -20,13 +20,13 @@ namespace Nikhil_ST10040092_CLDV6212_Part3.Controllers
             _hostEnvironment = hostEnvironment;
         }
 
-        // GET: Product/Create
+        //  Product/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Product/Create
+        //  Product/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Create(Product product, IFormFile imageFile)
@@ -53,21 +53,21 @@ namespace Nikhil_ST10040092_CLDV6212_Part3.Controllers
             return View(product);
         }
 
-        // GET: Product/Index
+        //  Product/Index
         public IActionResult Index()
         {
             var products = _context.Products.ToList();
             return View(products);
         }
 
-        // GET: Product/IndexAdmin
-        public IActionResult IndexAdmin()
+        //  Product/IndexAdmin
+        public IActionResult Admin()
         {
             var products = _context.Products.ToList();
             return View(products);
         }
 
-        // GET: Product/Edit/5
+        //  Product/Edit/5
         public IActionResult Edit(int id)
         {
             var product = _context.Products.Find(id);
@@ -78,7 +78,7 @@ namespace Nikhil_ST10040092_CLDV6212_Part3.Controllers
             return View(product);
         }
 
-        // POST: Product/Edit/5
+        //  Product/Edit
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Edit(int id, Product product, IFormFile imageFile)
@@ -105,23 +105,9 @@ namespace Nikhil_ST10040092_CLDV6212_Part3.Controllers
 
                 _context.Update(product);
                 _context.SaveChanges();
-                return RedirectToAction("IndexAdmin");
+                return RedirectToAction("Admin");
             }
             return View(product);
-        }
-
-        // POST: Product/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
-        public IActionResult DeleteConfirmed(int id)
-        {
-            var product = _context.Products.Find(id);
-            if (product != null)
-            {
-                _context.Products.Remove(product);
-                _context.SaveChanges();
-            }
-            return RedirectToAction("IndexAdmin");
         }
     }
 }
@@ -132,14 +118,8 @@ namespace Nikhil_ST10040092_CLDV6212_Part3.Controllers
 //https://www.w3schools.com/cs/index.php
 
 // code attribution
-//Bootswatch
-//https://bootswatch.com/
-
-// code attribution
 // https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/start-mvc?view=aspnetcore-8.0&tabs=visual-studio
 
 // code attribution
 // https://learn.microsoft.com/en-us/aspnet/core/security/authentication/identity?view=aspnetcore-8.0&tabs=visual-studio
 
-// code attribution
-// https://youtu.be/qvsWwwq2ynE?si=vwx2O4bCAFDFh5m_

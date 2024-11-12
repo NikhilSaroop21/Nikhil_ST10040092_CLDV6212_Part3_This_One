@@ -6,7 +6,7 @@ namespace Nikhil_ST10040092_CLDV6212_Part3.Models
 {
     public class FileModel
     {
-        public int Id { get; set; } // Make sure there is a primary key for the database
+        public int Id { get; set; } // Making sure there is a primary key for the database is available
         
         [Required]
         public string Name { get; set; }
@@ -17,7 +17,7 @@ namespace Nikhil_ST10040092_CLDV6212_Part3.Models
         
         [Display(Name = "Upload File")]
         [NotMapped]
-        public IFormFile UploadedFile { get; set; }  // New property to store the uploaded file temporarily
+        public IFormFile UploadedFile { get; set; }  // New property to for storing the uploaded file temporarily
 
         public string DisplaySize
         {
@@ -38,9 +38,7 @@ namespace Nikhil_ST10040092_CLDV6212_Part3.Models
 // W3schools
 //https://www.w3schools.com/cs/index.php
 
-// code attribution
-//Bootswatch
-//https://bootswatch.com/
+
 
 // code attribution
 // https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/start-mvc?view=aspnetcore-8.0&tabs=visual-studio
@@ -48,5 +46,3 @@ namespace Nikhil_ST10040092_CLDV6212_Part3.Models
 // code attribution
 // https://learn.microsoft.com/en-us/aspnet/core/security/authentication/identity?view=aspnetcore-8.0&tabs=visual-studio
 
-// code attribution
-// https://youtu.be/qvsWwwq2ynE?si=vwx2O4bCAFDFh5m_

@@ -1,16 +1,16 @@
 ﻿@model Nikhil_ST10040092_CLDV6212_Part3.Models.Order
+<link rel="stylesheet" href="~/css/Order_Create.css" asp-append-version="true" / >
 
-<h2>Delete Order</h2>
+<h2>Delete this Order</h2>
 
-<h3>Are you sure you want to delete this order?</h3>
 
 <div>
     <h4>Order ID: @Model.OrderId</h4>
     <dl class="row">
-        <dt class="col-sm-2">Customer Name</dt>
+        <dt class="col-sm-2">Name Of Customer</dt>
         <dd class="col-sm-10">@Model.CustomerName</dd>
 
-        <dt class="col-sm-2">Product</dt>
+        <dt class="col-sm-2">Name Of Product</dt>
         <dd class="col-sm-10">@Model.Product?.Product_Name</dd>
 
         <dt class="col-sm-2">Quantity</dt>
