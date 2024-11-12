@@ -1,0 +1,27 @@
+﻿@model Nikhil_ST10040092_CLDV6212_Part3.Models.Order
+
+<h2>Order Details</h2>
+
+<div>
+    <h4>Order ID: @Model.OrderId</h4>
+    <dl class="row">
+        <dt class="col-sm-2">Customer Name</dt>
+        <dd class="col-sm-10">@Model.CustomerName</dd>
+
+        <dt class="col-sm-2">Product</dt>
+        <dd class="col-sm-10">@Model.Product?.Product_Name</dd>
+
+        <dt class="col-sm-2">Quantity</dt>
+        <dd class="col-sm-10">@Model.Quantity</dd>
+
+        <dt class="col-sm-2">Order Date</dt>
+        <dd class="col-sm-10">@Model.OrderDate.ToShortDateString()</dd>
+
+        <dt class="col-sm-2">Address</dt>
+        <dd class="col-sm-10">@Model.Order_Address</dd>
+    </dl>
+</div>
+
+<a asp-action="Index" class="btn btn-secondary">Back to List</a>
+<a asp-action="Edit" asp-route-id="@Model.OrderId" class="btn btn-warning">Edit</a>
+<a asp-action="Delete" asp-route-id="@Model.OrderId" class="btn btn-danger">Delete</a>

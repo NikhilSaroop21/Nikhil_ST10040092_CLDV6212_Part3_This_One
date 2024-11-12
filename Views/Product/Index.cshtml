@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Nikhil_ST10040092_CLDV6212_Part3.Models.Product>
+
+@{
+    ViewData["Title"] = "Product List";
+}
+
+<h2>Product List</h2>
+
+<div class="row">
+    @foreach (var product in Model)
+
+    {
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                @if (!string.IsNullOrEmpty(product.ImageUrl))
+
+                {
+                    <img src="@product.ImageUrl" class="card-img-top" alt="Product Image" style="height: 200px; object-fit: cover;">
+                }
+                <div class="card-body">
+                    <h5 class="card-title">@product.Product_Name</h5>
+                    <p class="card-text">@product.Description</p>
+                    <p class="card-text"><strong>Price:</strong> $@product.Product_Price</p>
+                    <p class="card-text"><strong>Quantity:</strong> @product.Quantity</p>
+                </div>
+                <div class="card-footer text-center">
+                    <a href="Order/Create" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<style>
+  
+    .container {
+        padding-top: 20px;
+    }
+</style>
