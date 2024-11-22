@@ -41,13 +41,6 @@ namespace Nikhil_ST10040092_CLDV6212_Part3.Controllers
 }
 
 
-
-//# Assistance provided by ChatGPT
-//# Code and support generated with the help of OpenAI's ChatGPT.
-// code attribution
-// W3schools
-//https://www.w3schools.com/cs/index.php
-
 // code attribution // W3schools // https://www.w3schools.com/cs/index.php
 
 // code attribution //Microsoft //https://learn.microsoft.com/en-us/aspnet/mvc/overview/getting-started/introduction/getting-started
